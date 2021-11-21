@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import {GlobalStyle} from './styles/global';
+import {Header} from './components/Header';
+import {Banner} from './components/Banner';
+import {Hero} from './components/Hero';
+import {ProductsProvider} from './hooks/useProducts';
+import {ProductGrid} from './components/ProductGrid';
+const App: React.FC = () => (
+    <>
+        <Header />
+        <div className="container">
+            <Banner />
+            <Hero />
+            <ProductsProvider>
+                <ProductGrid />
+            </ProductsProvider>
+        </div>
+        <GlobalStyle />
+    </>
+);
 
 export default App;
