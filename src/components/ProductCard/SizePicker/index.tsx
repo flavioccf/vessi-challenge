@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+
 import {SizePickerContainer} from './style';
 
 export function SizePicker({sizes}: {sizes: number[]}) {

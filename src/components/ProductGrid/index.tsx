@@ -1,10 +1,11 @@
-import {useProducts} from '../../hooks/useProducts';
-import React, {useEffect, useState} from 'react';
-import {ProductGridContainer} from './style';
-import {ProductCard} from '../../components/ProductCard';
-import {CategoryCard} from '../CategoryCard';
-import imgAltCategory from '../../assets/img/cat_everyday_2.jpg';
+import React from 'react';
+
 import imgCategory from '../../assets/img/cat_everyday.jpg';
+import imgAltCategory from '../../assets/img/cat_everyday_2.jpg';
+import {ProductCard} from '../../components/ProductCard';
+import {useProducts} from '../../hooks/useProducts';
+import {CategoryCard} from '../CategoryCard';
+import {ProductGridContainer} from './style';
 
 export function ProductGrid() {
     const {products} = useProducts();

@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+
 import {formatToCad} from '../../../helpers';
 import {ProductInterface, useProducts} from '../../../hooks/useProducts';
 import {QuickAddContainer} from './style';

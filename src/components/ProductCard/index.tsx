@@ -1,10 +1,11 @@
-import {ProductInterface} from '../../hooks/useProducts';
 import React, {useState} from 'react';
-import {ProductCardContainer} from './style';
+
 import {formatToCad} from '../../helpers';
-import {useProducts} from '../../hooks/useProducts';
-import {SizePicker} from './SizePicker';
+import {ProductInterface, useProducts} from '../../hooks/useProducts';
 import {QuickAdd} from './QuickAdd';
+import {SizePicker} from './SizePicker';
+import {ProductCardContainer} from './style';
+
 interface ProductCardInterface {
     product: ProductInterface;
 }
