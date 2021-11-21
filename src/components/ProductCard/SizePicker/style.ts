@@ -27,16 +27,4 @@ export const SizePickerContainer = styled.div`
     }
     animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
         both;
-    @keyframes swing-in-top-fwd {
-        0% {
-            transform: rotateX(-100deg);
-            transform-origin: top;
-            opacity: 0;
-        }
-        100% {
-            transform: rotateX(0deg);
-            transform-origin: top;
-            opacity: 1;
-        }
-    }
 `;

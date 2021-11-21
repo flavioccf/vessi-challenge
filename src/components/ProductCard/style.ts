@@ -26,6 +26,9 @@ export const ProductCardContainer = styled.div<CardProps>`
         @media only screen and (max-width: 580px) {
             height: 145px;
         }
+        @media only screen and (max-width: 410px) {
+            height: 230px;
+        }
         &.categoryCard {
             border: 0;
             height: 350px;

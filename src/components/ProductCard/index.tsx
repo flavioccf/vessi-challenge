@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {formatToCad} from '../../helpers';
 import {ProductInterface, useProducts} from '../../hooks/useProducts';
@@ -19,6 +19,15 @@ export function ProductCard({product}: ProductCardInterface) {
     const handleQuickAdd = (product: ProductInterface): void => {
         addQuickAdd(product.id);
     };
+    const [windowSize, setWindowSize] = useState<number>(window.innerWidth);
+    useEffect(() => {
+        function handleResize() {
+            setWindowSize(window.innerWidth);
+        }
+        window.addEventListener('resize', handleResize);
+        handleResize();
+        return () => window.removeEventListener('resize', handleResize);
+    });
     return (
         <>
             <ProductCardContainer
@@ -35,7 +44,7 @@ export function ProductCard({product}: ProductCardInterface) {
                     onClick={() =>
                         product.quickAdd ? null : handleQuickAdd(product)
                     }>
-                    {product.quickAdd && window.screen.width > 480 ? (
+                    {product.quickAdd && windowSize > 480 ? (
                         <SizePicker sizes={product.sizes} />
                     ) : (
                         'QUICK ADD'
@@ -47,7 +56,7 @@ export function ProductCard({product}: ProductCardInterface) {
                     <li>{formatToCad(product.price)}</li>
                 </ul>
             </ProductCardContainer>
-            {product.quickAdd && window.screen.width <= 480 && (
+            {product.quickAdd && windowSize <= 480 && (
                 <QuickAdd product={product} />
             )}
         </>
