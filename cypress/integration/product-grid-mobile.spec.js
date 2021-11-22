@@ -4,30 +4,23 @@ describe('Test Product Grid On Mobile',{
   viewportWidth: 480,
 }, () => {
   beforeEach(() => {
-    cy.visit('https://vessi-challenge.vercel.app')
+    cy.visit('/')
   })
-  it('Should filter products', () => {
+  it('Should filter products and find filtered', () => {
     cy.get('.imgContainer').should('have.length', 6)
-    /* ==== Generated with Cypress Studio ==== */
-    cy.get('.bxyzTZ > .sc-hKwDye > span').click();
-    cy.get('.kropAr > .sc-gKclnd > .sc-hKwDye > span').click();
-    cy.get('.kropAr > :nth-child(3) > :nth-child(1)').click();
-    /* ==== End Cypress Studio ==== */
+    cy.get('button').eq(0).click();
+    cy.get('button').eq(2).click();
+    cy.get('.small').eq(3).click();
     cy.get('.imgContainer').should('have.length', 2)
-    cy.get('.details').eq(1).find('li').eq(1).should('have.text', 'ONYX BLACK')
+    cy.get('.details').eq(1).find('li').eq(1).should('have.text', 'LINEN BEIGE')
   })
 
-  /* ==== Test Created with Cypress Studio ==== */
   it('Should display and close Quick Add modal', function() {
-    /* ==== Generated with Cypress Studio ==== */
-    cy.get('.hnDGdS > .quickAdd').click();
+    cy.get('.quickAdd').eq(0).click();
     cy.get('.sizePicker > :nth-child(4)').click();
-    /* ==== End Cypress Studio ==== */
     cy.get('.productDetails').should('have.length', 1)
     cy.get('.selected').should('have.length', 1)
-    /* ==== Generated with Cypress Studio ==== */
     cy.get('#closeQuickAdd').click();
-    /* ==== End Cypress Studio ==== */
     cy.get('.productDetails').should('have.length', 0)
     cy.get('.selected').should('have.length', 0)
   });
