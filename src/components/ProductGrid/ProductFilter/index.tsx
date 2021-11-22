@@ -34,7 +34,7 @@ export function ProductFilter({
         type: keyof ProductInterface,
         value: string,
     ) => {
-        const filtered = products.filter((product) => {
+        const filtered = products.filter((product: ProductInterface) => {
             return product[type] === value;
         });
         addQuickAdd(-1);

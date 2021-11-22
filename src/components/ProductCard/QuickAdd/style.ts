@@ -1,5 +1,6 @@
-import styled from 'styled-components';
 import {transparentize} from 'polished';
+import styled from 'styled-components';
+
 export const QuickAddContainer = styled.div`
     overscroll-behavior: contain;
     position: fixed;
