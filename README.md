@@ -38,7 +38,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ### `yarn run cypress open`
 
 This will run the cypress GUI. 
-All the tests are running using the deployed URL (https://vessi-challenge.vercel.app) as source of truth;.
+All the tests are running using local enviroment, so `yarn start` must be running
 
 ### `yarn build`
 
