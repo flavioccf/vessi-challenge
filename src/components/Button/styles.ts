@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ButtonContainer = styled.button`
+export const Button = styled.button`
     position: relative;
     background: var(--v-white);
     border: 2px solid var(--v-dark-blue);

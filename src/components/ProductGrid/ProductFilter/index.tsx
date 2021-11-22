@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {ProductInterface, useProducts} from '../../../hooks/useProducts';
-import {ButtonContainer} from '../../Button/styles';
+import {Button} from '../../Button/styles';
 import {
     ColorFilterDisplay,
     Dropdown,
@@ -52,7 +52,7 @@ export function ProductFilter({
                     className="filterDrawer"
                     isDropdownOpen={isFilterDropdownVisible}
                     isVisibleByDefault={false}>
-                    <ButtonContainer
+                    <Button
                         onClick={() => {
                             setIsFilterDropdownVisible(
                                 !isFilterDropdownVisible,
@@ -60,40 +60,40 @@ export function ProductFilter({
                             setColorFilterOpen(false);
                         }}>
                         <span>FILTER</span>
-                    </ButtonContainer>
+                    </Button>
                 </Dropdown>
                 <DropdownSection
                     isVisibleByDefault={true}
                     isVisibleForMobile={isFilterDropdownVisible}>
-                    <ButtonContainer>
+                    <Button>
                         <span>SIZE</span> +
-                    </ButtonContainer>
+                    </Button>
                     <Dropdown
                         isDropdownOpen={colorFilterOpen}
                         isVisibleByDefault={true}>
-                        <ButtonContainer
+                        <Button
                             onClick={() => {
                                 setColorFilterOpen(!colorFilterOpen);
                                 setIsFilterDropdownVisible(false);
                             }}>
                             <span>COLOUR</span>
-                        </ButtonContainer>
+                        </Button>
                     </Dropdown>
-                    <ButtonContainer>
+                    <Button>
                         <span>STYLE</span> +
-                    </ButtonContainer>
-                    <ButtonContainer
+                    </Button>
+                    <Button
                         className={isFiltered ? '' : 'hidden'}
                         onClick={() => handleClearFilter()}>
                         <FiRefreshCcw />
-                    </ButtonContainer>
+                    </Button>
                 </DropdownSection>
                 <DropdownSection
                     isVisibleByDefault={colorFilterOpen}
                     isVisibleForMobile={colorFilterOpen}>
                     {products.map((product) => {
                         return (
-                            <ButtonContainer
+                            <Button
                                 onClick={() =>
                                     handleFilterProduct(
                                         'colour',
@@ -111,7 +111,7 @@ export function ProductFilter({
                                     color={
                                         product.hexColour
                                     }></ColorFilterDisplay>
-                            </ButtonContainer>
+                            </Button>
                         );
                     })}
                 </DropdownSection>
