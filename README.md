@@ -1,8 +1,8 @@
+<p align="center">
+  <img src="https://ksr-ugc.imgix.net/assets/019/263/950/dc1f06e0f8ccea0b1e351702d1653436_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1514497294&auto=format&frame=1&q=92&s=04a7d5281abe940ebd964908a8d9d951" width="350" title="hover text">
+</p>
+
 # Vessi - Front End Developer Assignment
-
-## Part 1 - Project Planning
-
-Please check the **Part 1** clicking [here](https://vessi-challenge.vercel.app)
 
 ## Part 2 - Product Grid Development
 
@@ -15,6 +15,7 @@ No **UI Framework** was used and all CSS was created from scratch in order to di
 
 - [Styled Components](https://styled-components.com) to create CSS in JS
 - [Prettier](https://prettier.io) and [ESLint](https://eslint.org) to lint and keep code clean across all files
+- [Cypress](https://www.cypress.io) to create End To End tests
 
 ### The results achieved were
 
@@ -23,6 +24,7 @@ No **UI Framework** was used and all CSS was created from scratch in order to di
 - Display size selection when clicking *Quick Add* on desktop
 - Display overlay card with size selection when clicking *Quick Add* on mobile device
 - Filter by colour (the other filters are non functional)
+- Created E2E tests using Cypress
 
 ## Available Scripts
 
