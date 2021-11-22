@@ -32,8 +32,8 @@ export function ProductCard({product}: ProductCardInterface) {
         <>
             <ProductCardContainer
                 isHovered={isHovered}
-                img={`${process.env.PUBLIC_URL}/img/products/${product.img}`}
-                altImg={`${process.env.PUBLIC_URL}/img/products/${product.altImg}`}>
+                img={product.img}
+                altImg={product.altImg}>
                 <div className="tag">{product.tag?.toUpperCase()}</div>
                 <div
                     className="imgContainer"

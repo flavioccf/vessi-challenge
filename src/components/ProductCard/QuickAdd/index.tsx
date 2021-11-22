@@ -16,10 +16,7 @@ export function QuickAdd({product}: {product: ProductInterface}) {
                     </button>
                     <h4>QUICK ADD</h4>
                     <div className="metaData">
-                        <img
-                            src={`${process.env.PUBLIC_URL}/img/products/${product.altImg}`}
-                            alt={product.title}
-                        />
+                        <img src={product.altImg} alt={product.title} />
                         <div>
                             <h5>{product.title.toUpperCase()}</h5>
                             <p>
