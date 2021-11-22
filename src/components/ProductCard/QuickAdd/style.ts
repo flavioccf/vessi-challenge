@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import {transparentize} from 'polished';
 export const QuickAddContainer = styled.div`
+    overscroll-behavior: contain;
     position: fixed;
     top: 0;
     z-index: 999;
@@ -20,6 +21,7 @@ export const QuickAddContainer = styled.div`
     .productDetails {
         position: absolute;
         bottom: 0;
+        bottom: env(safe-area-inset-bottom);
         width: 100%;
         min-height: 23.4rem;
         background: var(--v-white);
